@@ -158,8 +158,9 @@ auto main(int argc, char* argv[]) -> int {
     mesh.compute_velocity(nthreads);
   }
   auto t1 = std::chrono::high_resolution_clock::now();
-  auto elapsed = std::chrono::duration<double>(t1 - t0);
-  fmt::print("# threads: {}\nElapsed:   {:.9}\n", nthreads, elapsed);
+  auto total_elapsed = std::chrono::duration<double, std::milli>(t1 - t0);
+  auto avg_step = total_elapsed / NSTEPS;
+  fmt::print("{} {:.6} {:.6}\n", nthreads, total_elapsed, avg_step);
 
   return 0;
 }
