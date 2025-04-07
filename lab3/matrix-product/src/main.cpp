@@ -54,7 +54,7 @@ auto main(int argc, char* argv[]) -> int {
   int n = std::atoi(argv[2]);
   int k = std::atoi(argv[3]);
 
-  // Know seed for deterministic RNG
+  // Known seed for deterministic RNG
   srand48(42);
 
   Kokkos::initialize(argc, argv);
@@ -69,7 +69,9 @@ auto main(int argc, char* argv[]) -> int {
     double beta = drand48();
     matrix_init(C);
 
+    Kokkos::fence();
     matrix_product(alpha, A, B, beta, C);
+    Kokkos::fence();
   }
   Kokkos::finalize();
   return 0;
