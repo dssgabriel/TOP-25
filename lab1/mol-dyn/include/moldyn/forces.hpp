@@ -11,6 +11,6 @@ auto compute_forces(
   int64_t n, std::vector<double>& x, std::vector<double>& f, double side, double r_cutoff, double& e_pot, double& vir
 ) -> void;
 
-}  // namespace md
+} // namespace md
 
-#endif  // TOP_MOLDYN_FORCES_HPP
+#endif // TOP_MOLDYN_FORCES_HPP

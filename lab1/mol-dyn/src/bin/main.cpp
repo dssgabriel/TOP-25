@@ -68,15 +68,24 @@ auto print_info(void) -> void {
     "{:.<32} {:<6}\n"
     "{:.<32} {:<6}\n"
     "{:.<32} {:<6}\n",
-    " Number of particles ", NPART,
-    " Box side length ", side,
-    " Cut off ", r_cutoff,
-    " Time step ", h,
-    " Reduced temperature ", t_ref,
-    " Temperature scale interval ", i_reps,
-    " Stop scaling at move ", i_stop,
-    " Print interval ", i_print,
-    " Total number of steps ", max_steps
+    " Number of particles ",
+    NPART,
+    " Box side length ",
+    side,
+    " Cut off ",
+    r_cutoff,
+    " Time step ",
+    h,
+    " Reduced temperature ",
+    t_ref,
+    " Temperature scale interval ",
+    i_reps,
+    " Stop scaling at move ",
+    i_stop,
+    " Print interval ",
+    i_print,
+    " Total number of steps ",
+    max_steps
   );
   fmt::println("{0:─^79}", "");
 }

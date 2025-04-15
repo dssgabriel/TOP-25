@@ -4,7 +4,7 @@
 
 Tuesdays, 9:30 - 12:45 CET, CN2, Rabelais building, Guyancourt campus
 
-Lab sessions are not graded, though they remain mandatory. Any absence shall be justified to the administration and the TA.   
+Lab sessions are not graded, though they remain mandatory. Any absence shall be justified to the administration and the TA.
 Exercises are corrected during class, and corrections will _not_ be given.
 
 ### Resources

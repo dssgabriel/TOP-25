@@ -2,28 +2,17 @@ add_library(top.prng.compile_flags INTERFACE)
 
 target_compile_options(
   top.prng.compile_flags
-  INTERFACE
-    -Wall
-    -Wextra
-    -Wpedantic
-    -Wconversion
-    -Wcast-align
+  INTERFACE -Wall -Wextra -Wpedantic -Wconversion -Wcast-align
 )
 target_compile_features(top.prng.compile_flags INTERFACE c_std_23)
-set_target_properties(
-  top.prng.compile_flags
-  PROPERTIES
-    C_EXTENSIONS
-      OFF
-)
+set_target_properties(top.prng.compile_flags PROPERTIES C_EXTENSIONS OFF)
 
 add_library(top.prng STATIC)
 add_library(top::prng ALIAS top.prng)
 
 target_sources(
   top.prng
-  PRIVATE
-    prng.c
+  PRIVATE prng.c
   PUBLIC
     FILE_SET prng_headers
     TYPE HEADERS

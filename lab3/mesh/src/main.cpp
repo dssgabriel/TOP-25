@@ -5,8 +5,8 @@
 
 #include <omp.h>
 
-#include <fmt/core.h>
 #include <fmt/chrono.h>
+#include <fmt/core.h>
 
 constexpr uint64_t NSTEPS = 1'000;
 
@@ -146,8 +146,8 @@ auto main(int argc, char* argv[]) -> int {
     return -1;
   }
 
-  auto nx  = uint16_t(std::atoi(argv[1]));
-  auto ny  = uint16_t(std::atoi(argv[2]));
+  auto nx       = uint16_t(std::atoi(argv[1]));
+  auto ny       = uint16_t(std::atoi(argv[2]));
   auto nthreads = std::atoi(argv[3]);
 
   auto mesh = Mesh(nx, ny);
@@ -157,9 +157,9 @@ auto main(int argc, char* argv[]) -> int {
   for (size_t it = 0; it < NSTEPS; ++it) {
     mesh.compute_velocity(nthreads);
   }
-  auto t1 = std::chrono::high_resolution_clock::now();
+  auto t1            = std::chrono::high_resolution_clock::now();
   auto total_elapsed = std::chrono::duration<double, std::milli>(t1 - t0);
-  auto avg_step = total_elapsed / NSTEPS;
+  auto avg_step      = total_elapsed / NSTEPS;
   fmt::print("{} {:.6} {:.6}\n", nthreads, total_elapsed, avg_step);
 
   return 0;

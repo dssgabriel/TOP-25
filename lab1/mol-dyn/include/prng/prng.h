@@ -41,4 +41,4 @@ void prng_seed(double lo_bound, double hi_bound);
 ///         range provide in `seed`, if any.
 double prng_random();
 
-#endif  // TOP_PRNG_H
+#endif // TOP_PRNG_H

@@ -2,35 +2,17 @@ add_library(top.moldyn.compile_flags INTERFACE)
 
 target_compile_options(
   top.moldyn.compile_flags
-  INTERFACE
-    -Wall
-    -Wextra
-    -Wpedantic
-    -Wconversion
-    -Wcast-align
+  INTERFACE -Wall -Wextra -Wpedantic -Wconversion -Wcast-align
 )
 target_compile_features(top.moldyn.compile_flags INTERFACE cxx_std_23)
-set_target_properties(
-  top.moldyn.compile_flags
-  PROPERTIES
-    CXX_EXTENSIONS
-      OFF
-)
+set_target_properties(top.moldyn.compile_flags PROPERTIES CXX_EXTENSIONS OFF)
 
 add_library(top.moldyn STATIC)
 add_library(top::moldyn ALIAS top.moldyn)
 
 target_sources(
   top.moldyn
-  PRIVATE
-    avgvel.cpp
-    ekin.cpp
-    fcc.cpp
-    forces.cpp
-    init.cpp
-    maxwell.cpp
-    scale.cpp
-    update.cpp
+  PRIVATE avgvel.cpp ekin.cpp fcc.cpp forces.cpp init.cpp maxwell.cpp scale.cpp update.cpp
   PUBLIC
     FILE_SET moldyn_headers
     TYPE HEADERS

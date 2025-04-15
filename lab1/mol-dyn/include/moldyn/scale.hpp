@@ -9,6 +9,6 @@ namespace md {
 /// @brief Scales an array.
 auto scale_velocities(int64_t n, double sa, std::vector<double>& sx) -> void;
 
-}  // namespace md
+} // namespace md
 
-#endif  // TOP_MOLDYN_SCALE_HPP
+#endif // TOP_MOLDYN_SCALE_HPP

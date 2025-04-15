@@ -5,9 +5,8 @@
 
 namespace md {
 
-auto update_particles(
-  int64_t n, std::vector<double>& x, std::vector<double>& vh, std::vector<double>& f, double side
-) -> void {
+auto update_particles(int64_t n, std::vector<double>& x, std::vector<double>& vh, std::vector<double>& f, double side)
+  -> void {
   int64_t n3 = 3 * n;
   for (int64_t i = 0; i < n3; ++i) {
     x[i] += vh[i] + f[i];
@@ -27,4 +26,4 @@ auto update_particles(
   }
 }
 
-}  // namespace md
+} // namespace md
