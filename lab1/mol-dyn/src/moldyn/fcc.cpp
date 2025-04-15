@@ -34,4 +34,4 @@ auto fcc(int64_t n, double alpha, std::vector<double>& x) -> void {
   }
 }
 
-}  // namespace md
+} // namespace md

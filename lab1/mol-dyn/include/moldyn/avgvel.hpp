@@ -9,7 +9,6 @@ namespace md {
 /// @brief Compute average velocity.
 auto compute_average_velocity(int64_t n, std::vector<double>& vh, double v_avg, double h, double& count) -> double;
 
-}  // namespace md
+} // namespace md
 
-#endif  // TOP_MOLDYN_AVGVEL_HPP
-
+#endif // TOP_MOLDYN_AVGVEL_HPP

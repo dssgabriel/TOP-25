@@ -9,6 +9,6 @@ namespace md {
 /// @brief Sample Maxwell distribution at temperature `t_ref`.
 auto maxwell(int64_t n, std::vector<double>& vh, double h, double t_ref, double t_scale) -> void;
 
-}  // namespace md
+} // namespace md
 
-#endif  // TOP_MOLDYN_MAXWELL_HPP
+#endif // TOP_MOLDYN_MAXWELL_HPP

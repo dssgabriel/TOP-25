@@ -49,9 +49,9 @@ auto compute_forces(
       // If distance is inside cutoff radius, compute forces and contributions
       // to potential energy and virial
       if (rd <= r_cutoff * r_cutoff) {
-        double r_rd  = 1.0 / rd;
-        double r_rd3 = r_rd * r_rd * r_rd;
-        double r_rd4 = r_rd3 * r_rd;
+        double r_rd   = 1.0 / rd;
+        double r_rd3  = r_rd * r_rd * r_rd;
+        double r_rd4  = r_rd3 * r_rd;
         double r_r148 = r_rd4 * (r_rd3 - 0.5);
 
         e_pot += r_rd3 * (r_rd3 - 1.0);

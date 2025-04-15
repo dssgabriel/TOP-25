@@ -22,4 +22,4 @@ auto compute_average_velocity(int64_t n, std::vector<double>& vh, double v_avg, 
   return vel / h;
 }
 
-}  // namespace md
+} // namespace md

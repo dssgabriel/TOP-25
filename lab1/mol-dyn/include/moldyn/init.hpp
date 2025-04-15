@@ -8,6 +8,6 @@ namespace md {
 /// @brief Initializes a range to double precision scalar value.
 auto init_forces(std::vector<double>& s, double fill_val) -> void;
 
-}  // namespace md
+} // namespace md
 
-#endif  // TOP_MOLDYN_INIT_HPP
+#endif // TOP_MOLDYN_INIT_HPP

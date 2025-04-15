@@ -62,7 +62,7 @@ auto main(int argc, char* argv[]) -> int {
   stream::copy(c, a);
   benchmark("stream::mul", [&]() { stream::mul(b, 2.0, c); });
   stream::add(a, b, c);
-  benchmark("stream::triad", [&](){ stream::triad(c, 0.5, a, b); });
+  benchmark("stream::triad", [&]() { stream::triad(c, 0.5, a, b); });
   [[maybe_unused]] auto _ = stream::dot(a, b);
 
   return 0;
